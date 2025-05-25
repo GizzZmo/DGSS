@@ -15,6 +15,11 @@ jobs:
       - name: Set Up Docker
         run: |
           sudo apt update
+          sudo apt remove containerd
+          sudo apt autoremove
+          sudo apt update && sudo apt upgrade -y
+          sudo apt install containerd.io -y
+
           sudo apt install docker.io -y
 
       - name: Build & Push Docker Image
