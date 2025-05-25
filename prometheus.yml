@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "Security Monitoring"
+    static_configs:
+      - targets: ["localhost:5000"]
+
+alerts:
+  - alert: High Treasury Fraud Risk
+    expr: avg_over_time(treasury_fraud_events[10m]) > 3
+    for: 1m
+    labels:
+      severity: high
+    annotations:
+      description: "🚨 Treasury fraud detected! Immediate review required."
