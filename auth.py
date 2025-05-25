@@ -1,4 +1,4 @@
-Let's go file by file, providing the complete content of each **source file** while explaining its role in the **Decentralized Governance Security System (DGSS)**. 🚀  
+// Let's go file by file, providing the complete content of each **source file** while explaining its role in the **Decentralized Governance Security System (DGSS)**. 🚀  
 
 ---
 
