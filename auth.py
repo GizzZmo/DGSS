@@ -1,11 +1,11 @@
-// Let's go file by file, providing the complete content of each **source file** while explaining its role in the **Decentralized Governance Security System (DGSS)**. 🚀  
+##  Let's go file by file, providing the complete content of each **source file** while explaining its role in the **Decentralized Governance Security System (DGSS)**. 🚀  
 
 ---
 
 ### **📜 File #1: `auth.py` (OAuth2 + JWT Authentication)**
-**Purpose:** Secure authentication for governance users  
-**Technology:** Flask, JWT  
-```python
+##**Purpose:** Secure authentication for governance users  
+##**Technology:** Flask, JWT  
+`##``python
 from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required
 
