@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 10s
+
+scrape_configs:
+  - job_name: "Treasury Security Alerts"
+    static_configs:
+      - targets: ["localhost:5000"]
+
+alerts:
+  - alert: Treasury Fraud Detected
+    expr: avg_over_time(treasury_fraud_attempts[5m]) > 2
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      description: "🚨 Treasury manipulation detected—action required!"
